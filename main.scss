@@ -1,0 +1,455 @@
+$colors:(
+    one: #2C249B,
+    darkOne:#1a207f,
+    lightOne: #486FDE,
+    two:#E11843,
+    three:#13C1CF,
+    darkThree:#005681,
+    four:white, 
+    five: #673AB7,
+    );
+@function color($color-name){
+    @return map-get($colors,$color-name)
+};
+
+$padding:15px;
+$borders:15px;
+$desktop:840px;
+$mobile:415px;
+// $minimobile:315px;
+@mixin desktop{
+    @media(min-width: #{$desktop}) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media(max-width: #{$mobile}) {
+        @content;
+    }
+}
+// @mixin minimobile{
+//     @media(max-width: #{$minimobile}) {
+//         @content;
+//     }
+// }
+body,html{
+    height:100%;
+    overflow:auto;
+}
+/*=================
+splash page
+=================== */
+.cardBody {
+    position:absolute;
+    top:-90px;
+    left:10%;
+    z-index: -1;
+    width: 1000px;
+    height: 350px;
+    transform: rotate(315deg);
+    border-radius: 200px 5px 5px 200px;
+    box-shadow:inset 50px 50px 100px 100px color(one);  
+    background: linear-gradient(
+        to bottom,
+        color(lightOne),
+        color(lightOne) 50%,
+        color(two) 50%,
+        color(one)
+    );
+    //   stripes
+    background-size: 100% 5px;
+  }
+.cardBody2 {
+    position:absolute;
+    top:-100px;
+    left:20%;
+    z-index: -1;
+    width: 500px;
+    height: 250px;
+    transform: rotate(315deg);
+    border-radius: 200px 5px 5px 200px;
+    box-shadow:inset 100px 0px 100px color(two);  
+    background-image:url(style/image/name/NAME4.PNG);
+    background-repeat:no-repeat;
+    // background: linear-gradient(
+    //         to bottom,
+    //         color(lightOne),
+    //         color(lightOne) 50%,
+    //         color(one) 50%,
+    //         color(one)
+    //       );
+     //  stripes
+    // background-size: 100% 5px;
+}
+
+.cardBody3 {
+    position:absolute;
+    // top:24%;
+    // left:17.5%;
+    top:-30%;
+    left:-5%;
+    height: 700px;
+    width: 700px;
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow:inset 0px 300px 80px color(four);  
+    // box-shadow:inset 0 0 100px rgba(0,0,0.8,0.8);
+    background:white;
+    opacity:0.3;
+    @include mobile{
+        display:none;
+    }
+}
+.overlay {
+    position:relative;
+    top:0;
+    z-index: 10;
+    height: 350px;
+    width: 350px;
+    // box-shadow:inset 0 0 100px rgba(0,0,0,0.5);
+    background:color(four);
+    opacity:0.3;
+    background-size: 100% 5px;
+    border-radius: 50%;
+    @include mobile{
+        background:black;
+    }
+}
+.name{
+    position:fixed;
+    bottom:50px;
+    right:10%;
+    width: 300px;
+    z-index: 8;
+
+    @include mobile{
+        bottom:10px;
+        left:2px;
+        width: 100px;
+    }
+        #firstName{
+            height:80px;
+            @include mobile{
+                height:40px;
+            }
+        }
+        #lastName{
+            height:50px;
+            margin-left:100px;
+            @include mobile{
+                height:30px;
+                margin-left:60px;
+            }
+        }
+
+    // @include mobile{
+    //     bottom:5%;
+    //     left:5%;
+    // }
+}
+
+
+/*=================
+Navigation
+=================== */
+// sns & contact nav bar
+.navigation{
+    position:absolute;
+    top:0;
+    right:0;
+    width: 50px;
+    height: 300px;
+        .arrow{
+        @include mobile{
+           margin-top:250px;
+        }
+            
+        }
+        .icons{
+            width:30px;
+            padding-top:5px;
+            padding-bottom:5px;
+        }
+        .icons:hover {
+            width:45px;
+            padding-top:0px;
+            padding-bottom:0px;
+          }
+}
+.bounce {
+    animation: bounce 3s;
+    animation-iteration-count: 3;
+}
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+//pages nav bar
+nav{
+    position:absolute;
+    bottom:0px;
+    text-align:right;
+    padding-top:15px;
+    padding-bottom:0;
+    width: 100vw;
+    z-index:5;
+    background: color(four);
+    @include mobile{
+        left:0;  
+        padding:0;
+        margin:0;
+        border:0;
+        border-top: 100px;
+    }
+        .pageNav{
+            width:150px;
+            padding-top:5px;
+            padding-bottom:5px;
+            @include mobile{
+                width:150px;
+                padding:10px;
+                margin:0;
+                border:0;
+            }
+        }
+        .back{
+            width:60px;
+            padding-top:5px;
+            padding-bottom:5px;
+            @include mobile{
+                width:120px;
+                padding:10px;
+                margin:0;
+                border:0;
+            }
+
+        }
+
+}
+
+/*=================
+Title & other pg styles
+=================== */
+.titleImg{
+    width:30px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.icons2{
+    width:30px;
+    border-top:5px;
+    border-bottom:5px;
+}
+.icons3{
+
+    bottom:0;
+    width:25px;
+    border-top:5px;
+    border-bottom:5px;
+}
+.icons4{
+    width:120px;
+    border-top:5px;
+    border-bottom:5px;
+    @include mobile{
+        width:60px;
+    }
+}
+
+
+/*=================
+About Page
+=================== */
+.aboutMe{
+    font-size: 16px;
+}
+
+/*=================
+Porfolio Page
+=================== */
+#work{
+    margin-top:2%;
+    margin-left:2%;
+    width: 100%;
+    padding-bottom: 10%;
+
+    @include mobile{
+        margin-left:10%;
+        margin-bottom:20%;
+        width: 90%;
+        padding-bottom:20%;
+    }
+    .subCon{
+        display:inline-block;
+        position: relative;
+        width: 40%;
+        padding:$padding;
+        @include mobile{
+            width: 100%;
+        }
+
+        .projTitle{
+            text-align:center;
+            color: color(four);
+            font-weight: bold;
+            font-size:20px;
+        }
+    }
+}
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+// hide content of proj until mouse hovers
+.box{
+    transition: .5s ease;
+    display: block;
+    width: 93%;
+    height: 88%;
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    
+    // left: 29%;
+    // transform: translate(-35%, -50%);
+    // -ms-transform: translate(-40%, -50%);
+    text-align: center;
+    background: black;
+    // border-radius: 5px 5px 5px 5px;
+    // border-left:1px solid color(two);
+    // border-right:1px solid color(two);
+    // border-top:1px solid color(lightOne);
+    // border-bottom:1px solid color(two);
+
+    @include mobile{
+        border-radius: 5 5 5 5;
+    }
+
+
+    .text{
+        font-size: 16px;
+        padding:2px;
+        opacity:0.8;
+        color: white;
+
+        @include mobile{
+            font-size: 12px;
+        }
+          
+    }
+} 
+
+/*=================
+Skills Page
+=================== */
+#skills{
+    margin-top:2%;
+    margin-left:2%;
+    width: 60%;
+    margin-bottom:20%;
+    @include mobile{
+        border-right:10px;
+        margin-left:25%;
+        margin-right:10%;
+        width:80%;
+        margin-bottom:50%;
+    }
+    .techImgTitle{
+        width: 20%;
+        display:block;
+        // border-bottom:2px solid color(two);
+        margin-left:35%;
+        margin-top:20px;
+        margin-bottom: 20px;
+        @include mobile{
+            margin-left:20%;
+            width: 60%;
+        }
+    }
+    .techImg{
+        width: 60%;
+        padding:$padding;
+
+        @include mobile{
+            width:80%;
+            margin-left:15%;
+        }
+    }
+}
+
+/*=================
+All  Hover effects
+=================== */
+.pageNav:hover {
+    width:200px;
+    padding-top:0px;
+    padding-bottom:0px;
+    // @include mobile{
+    //     width:150px;
+    //     background:rgba(0,0,0, .2);
+    // }
+}
+.back:hover {
+    width:120px;
+    padding-top:0px;
+    padding-bottom:0px;
+    // @include mobile{
+    //     background:rgba(0,0,0, .2);
+    // }
+}
+.icons2:hover {
+    width:45px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.icons3:hover {
+    width:50px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.container:hover .image {
+    opacity: 0.5;
+}
+.container:hover .box {
+    opacity: 0.7;
+}
+.container:hover .techImg {
+    opacity: 0.6;
+}
+/*=================
+Page Transition
+=================== */
+// .pageOverlay{
+//     position:absolute;
+//     width: 100%;
+//     height:100%;
+//     background: red;
+//     left:0;
+//     top:0;
+//     transform: scale(0);
+//     transform-origin:left;
+// }
+
+// .transition-wipe{
+//     transition: .7s cubic-bezier(0,0,.58,1);
+//     transform: scaleX(0);
+// }
+
+// html.is-animating .transition-wipe{
+//     transform: scaleX(1);
+// }
