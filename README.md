@@ -1,4 +1,4 @@
-# Abstract)
+# Abstract
 ### Overview
 A portfolio website for users to showcase their work. 
 
@@ -19,14 +19,14 @@ The webpage is mobile responsive
 
 ![](appScreenshots/1.PNG)      
 
-###
+---
  
 ![](appScreenshots/2.PNG)      
-###
+---
 
 ![](appScreenshots/3.PNG)      
 
-###
+---
  
 ![](appScreenshots/4.PNG) 
  
