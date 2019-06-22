@@ -39,6 +39,12 @@ splash page
   background-repeat: no-repeat;
 }
 
+@media (max-width: 415px) {
+  .cardBody2 {
+    overflow: hidden;
+  }
+}
+
 .cardBody3 {
   position: absolute;
   top: -30%;
@@ -74,6 +80,7 @@ splash page
 @media (max-width: 415px) {
   .overlay {
     background: black;
+    overflow: hidden;
   }
 }
 
@@ -87,7 +94,7 @@ splash page
 
 @media (max-width: 415px) {
   .name {
-    bottom: 10px;
+    top: 450px;
     left: 2px;
     width: 100px;
   }
@@ -99,7 +106,7 @@ splash page
 
 @media (max-width: 415px) {
   .name #firstName {
-    height: 40px;
+    height: 30px;
   }
 }
 
@@ -110,7 +117,7 @@ splash page
 
 @media (max-width: 415px) {
   .name #lastName {
-    height: 30px;
+    height: 20px;
     margin-left: 60px;
   }
 }
@@ -127,6 +134,16 @@ Navigation
 }
 
 @media (max-width: 415px) {
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 415px) {
   .navigation .arrow {
     margin-top: 250px;
   }
@@ -136,6 +153,12 @@ Navigation
   width: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+@media (max-width: 415px) {
+  .navigation .icons {
+    padding-left: 5px;
+  }
 }
 
 .navigation .icons:hover {
@@ -202,6 +225,7 @@ nav {
 
 @media (max-width: 415px) {
   nav {
+    text-align: left;
     left: 0;
     padding: 0;
     margin: 0;
@@ -211,32 +235,29 @@ nav {
 }
 
 nav .pageNav {
-  width: 150px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 40px;
+  padding: 10px;
 }
 
 @media (max-width: 415px) {
   nav .pageNav {
-    width: 150px;
-    padding: 10px;
-    margin: 0;
-    border: 0;
+    height: 30px;
+    padding: 5px;
   }
 }
 
 nav .back {
-  width: 60px;
+  height: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 @media (max-width: 415px) {
   nav .back {
-    width: 120px;
-    padding: 10px;
-    margin: 0;
-    border: 0;
+    left: 0;
+    height: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
@@ -297,6 +318,7 @@ Porfolio Page
     margin-bottom: 20%;
     width: 90%;
     padding-bottom: 20%;
+    overflow: auto;
   }
 }
 
@@ -402,15 +424,31 @@ Skills Page
 All  Hover effects
 =================== */
 .pageNav:hover {
-  width: 200px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  height: 40px;
+  padding: 5px;
+}
+
+@media (max-width: 415px) {
+  .pageNav:hover {
+    height: 30px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .back:hover {
-  width: 80px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  height: 30px;
+  padding: 0px;
+}
+
+@media (max-width: 415px) {
+  .back:hover {
+    left: 0;
+    height: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .icons2:hover {
