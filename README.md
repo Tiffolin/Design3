@@ -15,23 +15,32 @@ https://tiffolin.github.io/Design3/.
 * SASS
 
 ### Demo
-The webpage is mobile responsive
+An abstract Design with multiple webpages. 
 
 ![](appScreenshots/1.PNG)      
 
-![](appScreenshots/m1.PNG)     
 ---
  
 ![](appScreenshots/2.PNG)      
-![](appScreenshots/m2.PNG)     
+
 ---
 
 ![](appScreenshots/3.PNG)      
-![](appScreenshots/m3.PNG)     
+
 
 ---
+
+The webpage is mobile responsive
  
 ![](appScreenshots/4.PNG) 
+
+---
+
+The webpage is mobile responsive
+
+![](appScreenshots/m1.PNG)     
+![](appScreenshots/m2.PNG)     
+![](appScreenshots/m3.PNG)     
 ![](appScreenshots/m4.PNG)     
  
 
