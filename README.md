@@ -35,9 +35,18 @@ An abstract Design with multiple webpages.
 ---
 The webpage is mobile responsive
 
-![](appScreenshots/m1.PNG)     
-![](appScreenshots/m2.PNG)     
+![](appScreenshots/m1.PNG)    
+
+
+--- 
+![](appScreenshots/m2.PNG)   
+
+
+---  
 ![](appScreenshots/m3.PNG)     
+
+
+---
 ![](appScreenshots/m4.PNG)     
  
 
